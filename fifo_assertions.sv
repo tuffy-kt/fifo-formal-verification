@@ -28,7 +28,7 @@ assume_property_push: assume property (full |-> !push);
 assume_property_pull: assume property (empty |-> !pop);
 
 //AFTER RESET
-        ast_check_count: assert property ($rose(rst_n)|-> count ==0);
+ast_check_count: assert property ($rose(rst_n)|-> count ==0);
 ast_check_empty: assert property ($rose(rst_n) |-> (empty==1));
 ast_check_full: assert property ($rose(rst_n) |-> (full==0));
 
