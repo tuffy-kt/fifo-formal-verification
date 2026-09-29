@@ -81,7 +81,7 @@ cov_tracked_depe	                                          Vacuity guard: tracke
 
 
 How to run:
-analyze -sv ../rtl/fifo.sv fifo_props.sv
+analyze -sv fifo.sv fifo_props.sv
 elaborate -top fifo
 clock clk
 reset -expression !rst_n
