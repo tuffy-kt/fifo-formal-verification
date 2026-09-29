@@ -108,9 +108,9 @@ module fifo #(
   end
 
   // ---------------- flags ----------------
- //Bug count never goes to DEPTH, so full is never asserted. It should be (count == DEPTH)
+ 
   assign full = (count == DEPTH - 1);
- //Bug empty is never asserted. It should be (count == 0)
+ 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) empty <= 1'b1;
     else        empty <= (count == 0);
