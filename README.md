@@ -80,6 +80,10 @@ cov_tracked_depe	                                          Vacuity guard: tracke
 
 
 
+Bugs Detected : 
+count never goes to DEPTH, so full is never asserted. It should be (count == DEPTH)
+Bug empty is never asserted. It should be (count == 0)
+
 How to run:
 analyze -sv fifo.sv fifo_props.sv
 elaborate -top fifo
